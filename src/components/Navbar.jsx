@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
-      <NavLink to="/Photos">Photos</NavLink>
-      <NavLink to="/Likes">Likes</NavLink>
+      <NavLink to="/Photos">Galería de fotografías</NavLink>
+      <NavLink to="/Likes">Favoritas</NavLink>
     </nav>
   );
 };

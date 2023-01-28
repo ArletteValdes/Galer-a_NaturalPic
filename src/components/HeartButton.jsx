@@ -4,13 +4,13 @@ import Heart from "react-animated-heart"
 
 const HeartButton=()=>{
 
-    const { addFav } = useLikesContext();
+    const { addFav} = useLikesContext();
 
     const [isClick, setClick]=useState(false);
 
     return(
         <div className="like">
-        <Heart isClick={isClick} onClick={()=>((setClick(!isClick) & addFav(item.photographer)))}/>
+        <Heart isClick={isClick} onClick={()=>((setClick(!isClick) , addFav(item.photographer)))}/>
         
         </div>
 

@@ -20,7 +20,7 @@ const Photos = () => {
 
   return (
     <div className="galeria">
-      <h1> Galería mejores fotografías</h1>
+    
       <ul className="lista">
         {Pics.map((photos) => {
           return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Navbar";
 
@@ -12,7 +12,6 @@ function App() {
    
       <Navbar />
       <Routes>
-  
         <Route path="/Photos" element={<Photos />} />
         <Route path="/Likes" element={<Likes />} />
         <Route path="*" element={<h1>Error 404</h1>} />

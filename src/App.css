@@ -3,33 +3,61 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(232, 238, 238);
+}
+
 nav {
-  color: aliceblue;
+  padding: 20px;
+  font-size: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgb(199, 217, 232);
+
+  backdrop-filter: blur(2px);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(104, 157, 154);
+  --c: linear-gradient(rgb(255, 255, 255) 0 0); /* update the color here */
+
+  padding-bottom: 0.15em;
+  background: var(--c), var(--c);
+  background-size: 0.3em 0.1em;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s linear, background-size 0.3s 0.2s linear;
+}
+a:hover {
+  background-size: 40% 0.1em;
+  background-position: 10% 100%, 90% 100%;
 }
 
 .galeria {
   padding: 30px;
-  align-items: center;
 }
 
-
-.container{
- display: flex;
- flex-direction: column;
+.container {
+  display: flex;
+  flex-direction: column;
+  color: rgb(104, 157, 154);
 }
 
 .card {
-  display:flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   width: 220px;
-  background-color: rgb(171, 201, 202);
+  background-color: rgb(226, 233, 233);
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-width: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 ul.lista {
@@ -41,27 +69,23 @@ ul.lista {
 }
 
 .autor {
-  color: aliceblue;
+  color: rgb(104, 157, 154);
   font-size: medium;
+  background-color: rgb(255, 255, 255);
 }
 img.foto {
-
   height: 130px;
-  outline-style: solid;
-  outline-width: 0.2rem;
-  outline-color: aliceblue;
+  padding: 3px;
+  box-shadow: rgba(53, 141, 137, 0.21) 0px 50px 100px -20px,
+    rgba(17, 111, 113, 0.3) 0px 30px 60px -30px;
 }
 
 h1 {
-  color: rgb(20, 21, 21);
+  color: rgb(104, 157, 154);
+  font-size: 3rem;
+  width: 207px;
 }
 
-
-
-
-.like{
+.like {
   position: relative;
-
-
-
 }
