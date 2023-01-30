@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { useState } from "react";
-
+import LikesProvider from "../Context/LikesContext";
+import UserProvider from "../Context/UserContext";
 import HeartButton from "../components/HeartButton";
+import { useLikesContext } from "../Context/LikesContext";
 
 const Photos = () => {
   const [Pics, setPics] = useState([]);
 
- 
+  const { addFav} = useLikesContext();
 
   const getData = async () => {
     const res = await fetch("fotos.json");
@@ -24,14 +26,13 @@ const Photos = () => {
       <ul className="lista">
         {Pics.map((photos) => {
           return (
-            <div className="container" key={photos.photographer}>
-              <div className="card">
+          
+              <div className="card" key={photos.photographer}>
                 <h1 className="autor">{photos.photographer}</h1>
                 <img className="foto" src={photos.src.original}></img>
-                <HeartButton />
-{/* 
-                <button onClick={() => addFav(item.photographer)}>Like</button> */}
-              </div>
+                <HeartButton photos={photos}/>
+
+        
             </div>
           );
         })}

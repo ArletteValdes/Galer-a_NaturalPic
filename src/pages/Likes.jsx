@@ -5,14 +5,17 @@ const Likes = () => {
 
   return (
     <>
-      <div> Lista de Likes</div>
+         
+      <ul>
       {fav.map((photos) => {
         return (
-          <ul>
-            <li key={photos.photographer}>Fotógrafo={photos.photographer}</li>
-          </ul>
+            <li className="card" key={photos.photographer.id}>
+                <h1 className="autor">{photos.photographer.photographer}</h1>
+                <img className="foto" src={photos.photographer.src.original}></img>
+            </li>
         );
       })}
+      </ul>
     </>
   );
 };
